@@ -1,0 +1,45 @@
+.box-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(168, 167, 164);
+    width: 400px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.tittle-log {
+    font-weight: 500;
+    font-size: 35px;
+}
+.form-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.inputs {
+    border-radius: 5px;
+    border: none;
+    width: 180px;
+    height: 30px;
+    font-weight: 500;
+    font-size: 18px;
+}
+.login-button {
+    background-color: beige;
+    border-radius: 5px;
+    border: none;
+    width: 70px;
+    height: 40px;
+    font-weight: 500;
+    font-size: 18px;
+}
+.login-button:hover {
+    background-color: aquamarine;
+    cursor: pointer;
+}

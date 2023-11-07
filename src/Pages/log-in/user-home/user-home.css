@@ -1,0 +1,38 @@
+.titleAndLogOut-container {
+    display: flex;
+    justify-content: space-between;
+}
+.logOut-button {
+    background-color: rgb(187, 185, 185);
+    border: none;
+    border-radius: 5px;
+    height: 40px;
+    width: 80px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.folders-collage {
+    width: 80%;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.add-delete-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.probando {
+    position: relative;
+    left: 500px;
+    bottom: 800px;
+    font-weight: 500;
+    height: 50px;
+    width: 150px;
+    border: none;
+    background-color: rgb(185, 173, 173);
+    cursor: pointer;
+}

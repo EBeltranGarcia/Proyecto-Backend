@@ -1,5 +1,9 @@
+//stylesheet
 import './App.css';
+//module packages
 import { Link } from 'react-router-dom';
+//components
+
 
 function App() {
   return (

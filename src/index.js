@@ -1,7 +1,10 @@
+//stylesheet
+import './index.css';
+//module packages
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import Router from './Components/router';
+//components
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
