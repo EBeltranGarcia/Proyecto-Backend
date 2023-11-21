@@ -1,7 +1,18 @@
 .list-container {
+    text-align: center;
     list-style: none;
+    position: relative;
+    left: 95px;
+    bottom: 305px;
 }
 .info-tittle {
     padding: 0%;
     margin: 0%;
+}
+.close-button {
+    height: 30px;
+    width: 70px;
+    position: relative;
+    bottom: 290px;
+    left: 320px;
 }

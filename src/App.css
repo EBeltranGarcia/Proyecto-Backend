@@ -3,7 +3,10 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .start-button {
     text-decoration: none;
@@ -17,3 +20,4 @@
 .start-button:hover {
     background-color: rgb(155, 155, 155);
 }
+

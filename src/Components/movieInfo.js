@@ -23,7 +23,7 @@ function MovieInfo({setShow}) {
                     <p>10/10</p>
                 </li>    
             </ul>
-            <button onClick={()=> setShow(false)}>Close</button>
+            <button className="close-button" onClick={()=> setShow(false)}>Close</button>
         </div>
     )
 }

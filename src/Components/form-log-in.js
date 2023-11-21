@@ -25,7 +25,7 @@ function FormLogIn({setUser}) {
 
     return (
         <div className="box-container">
-            <h2 className="tittle-log">Log In</h2>
+            <h2 className="tittle-log">Welcome</h2>
             <form className="form-container" onSubmit={handleSubmit}>
                 <input type="text" placeholder="Name" className="inputs" value={name} onChange={event => setName(event.target.value)}
                 />
