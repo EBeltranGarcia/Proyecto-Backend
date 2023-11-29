@@ -8,7 +8,7 @@ function App() {
   
   return (
     <div className='home-container'>
-      <video className='video' src="./assets/backgroundVideo.mp4" autoPlay loop muted/>
+      <video className='video' src="./assets/background-video.mp4" autoPlay loop muted/>
       <div className='text-container'>
         <h1>Movie App</h1>
         <h3 className='background-color'>Welcome to your movie gallery</h3>

@@ -12,7 +12,7 @@ function UserHome({user, setUser}) {
     }
 
     return (
-        <div>
+        <div className="holake">
             <nav className="titleAndLogOut-container">
                 <h2>Welcome back! {user}</h2>
                 <button onClick={handleLogout} className="logOut-button">Log Out</button>

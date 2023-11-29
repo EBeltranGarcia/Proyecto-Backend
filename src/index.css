@@ -2,9 +2,12 @@
 
 body {
     font-family: 'Raleway', sans-serif;
-    background-color: rgb(241, 239, 198);
     font-weight: 500;
     margin: 0;
+    background-image: url(/public/assets/background-image.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 

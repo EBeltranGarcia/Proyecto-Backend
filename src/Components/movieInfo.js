@@ -16,7 +16,7 @@ function MovieInfo({setShow}) {
                 </li>
                 <li className="list-container">
                     <h4 className="info-tittle">Duration:</h4>
-                    <p>a lot</p>
+                    <p>a lsadldsal</p>
                 </li>
                 <li className="list-container"> 
                     <h4 className="info-tittle">Rating:</h4>
