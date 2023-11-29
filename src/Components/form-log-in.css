@@ -3,16 +3,21 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgb(168, 167, 164);
+    background-color: rgba(63, 177, 177, 0.932);
     width: 400px;
     height: 450px;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
+    border-radius: 2px;
+}
+.login-image {
+    width: 80px;
 }
 .tittle-log {
     font-size: 35px;
+    margin: 10px 0px 18px 0px;
 }
 .form-container {
     display: flex;
@@ -35,6 +40,7 @@
     width: 70px;
     height: 40px;
     font-size: 18px;
+    margin-top: 5px;
 }
 .login-button:hover {
     background-color: rgb(230, 230, 216);

@@ -25,6 +25,7 @@ function FormLogIn({setUser}) {
 
     return (
         <div className="box-container">
+            <img className="login-image" src="./assets/icon-image.ico" alt="login icon"/>
             <h2 className="tittle-log">Welcome</h2>
             <form className="form-container" onSubmit={handleSubmit}>
                 <input type="text" placeholder="Name" className="inputs" value={name} onChange={event => setName(event.target.value)}
