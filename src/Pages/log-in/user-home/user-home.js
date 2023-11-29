@@ -12,9 +12,12 @@ function UserHome({user, setUser}) {
     }
 
     return (
-        <div className="holake">
+        <div className="homepage-container">
             <nav className="titleAndLogOut-container">
-                <h2>Welcome back! {user}</h2>
+                <div className="user-message-container">
+                    <h2>Welcome back!</h2>
+                    <h2 id="username">{user}</h2>
+                </div>    
                 <button onClick={handleLogout} className="logOut-button">Log Out</button>
             </nav>
             <main className="folders-collage">

@@ -1,12 +1,20 @@
-.holake {
+.homepage-container {
     margin: 10px 5px 0px 8px;
+}
+.user-message-container {
+    display: flex;
+    gap: 5px;
+}
+#username {
+    color: red;
 }
 .titleAndLogOut-container {
     display: flex;
     justify-content: space-between;
+    margin-right: 10px;
 }
 .logOut-button {
-    background-color: rgb(187, 185, 185);
+    background-color: rgb(76, 178, 184);
     border: none;
     border-radius: 5px;
     height: 40px;
@@ -14,6 +22,9 @@
     font-size: 15px;
     font-weight: 500;
     cursor: pointer;
+}
+.logOut-button:hover {
+    background-color: rgb(99, 197, 202);
 }
 .folders-collage {
     width: 80%;
