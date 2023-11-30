@@ -1,7 +1,7 @@
 .folder-container{
     border: solid 2px rgb(0, 47, 255);
     width: 230px;
-    height: 355px;
+    height: auto;
     text-align: center;
     background-color: rgba(127, 193, 255, 0.932);
 }
@@ -24,20 +24,25 @@
     top: 10px;
 }
 .movie-tittle {
-    box-sizing: border-box;
-    margin: 5px;
+    margin: 10px;
+    word-wrap: break-word;
 }
 .movie-tittle2 {
     font-size: 20px;
     position: relative;
-    left: 55px;
+    left: 30px;
 }
 .folder-button {
     border: none;
+    height: 30px;
+    width: 70px;
     background-color: rgb(197, 191, 191);
-    height: 25px;
     border-radius: 5px;
     cursor: pointer;
+    margin: 5px 0px 10px 0px;
+}
+.folder-button:hover {
+    background-color: rgb(172, 167, 167);
 }
 .folder-button2 {
     display: none;
