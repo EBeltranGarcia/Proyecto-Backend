@@ -4,6 +4,7 @@ import "./user-home.css";
 
 //components
 import MovieFolders from "../movie-folders/movie-folders";
+import { Link } from "react-router-dom";
 
 function UserHome({user, setUser}) {
 
@@ -33,7 +34,7 @@ function UserHome({user, setUser}) {
             </main> 
             <section className="add-delete-container">
                 <button className="probando">Add Movie</button>
-                <button className="probando">Delete Movie</button>
+                <Link className="probando" to="/addMovie">Hola</Link>
             </section>   
         </div>
     )
