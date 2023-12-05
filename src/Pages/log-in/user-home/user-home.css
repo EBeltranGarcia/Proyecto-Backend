@@ -33,12 +33,6 @@
     flex-wrap: wrap;
     gap: 15px;
 }
-.add-delete-container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
-}
 .go-to-addMovie {
     position: absolute;
     left: 82%;
