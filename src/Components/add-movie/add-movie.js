@@ -2,13 +2,39 @@
 import "./add-movie.css"
 //module packages
 import { Link } from 'react-router-dom';
+import axios from 'axios'
+import { useState } from "react";
 //components
 
 function AddMovie() {
+
+    const[messageOk,setMessageOk]= useState(false)
+
+    const loadUser = async (event) => {
+
+        event.preventDefault();
+
+        const formMovies={
+            "name":event.target[0].value,
+            "genre":event.target[1].value,
+            "duration":event.target[2].value,
+            "rating":event.target[3].value
+        }
+
+        await axios.post("http://localhost:3000/movies/insertMovie",formMovies)
+        .then((res)=>console.log(res))
+        .then(data=>event.target.reset())
+        .then(()=> {
+            setMessageOk(true);
+            setTimeout(()=>setMessageOk(false),2000)
+        })
+        .catch((error)=>console.log(error))
+    }
+
     return (
         <div>
             <video className='video-background-form' src="./assets/background-video-addMovie.mp4" autoPlay loop muted/>
-            <form className="addMovie-Container" action="http://localhost:3000/movies/insertMovie" method="POST">
+            <form className="addMovie-Container" onSubmit={(event)=>loadUser(event)}>
                 <div className="backgroundForm-container">
                     <div className="text-input">
                         <label htmlFor="movieName">Movie Name </label>
@@ -43,6 +69,7 @@ function AddMovie() {
                         <input className="input-style" type="number" name="rating" id="movieRating" min="0" max="10" placeholder="1-10"/>
                     </div>
                     <input className="addMovie-button" type="submit" value="Send"/>
+                    {messageOk === false? "" :<p className="confirmation-text">¡User Loaded!</p>}
                 </div>
             </form>
             <Link to="/login" className='goBack-button'>Go back</Link>

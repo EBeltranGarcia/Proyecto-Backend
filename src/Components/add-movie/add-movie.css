@@ -48,6 +48,11 @@
     background-color: rgb(66, 66, 66);
     color: white;
 }
+.confirmation-text {
+    color: white;
+    position: absolute;
+    top: 72%;
+}
 .goBack-button {
     position: absolute;
     left: 92%;
