@@ -54,6 +54,7 @@ function AddMovie() {
                             <option value="Adventure">Adventure</option>
                             <option value="Documentary">Documentary</option>
                             <option value="Fantasy">Fantasy</option>
+                            <option value="Drama">Drama</option>
                             <option value="Musical">Musical</option>
                             <option value="Animation">Animation</option>
                             <option value="Mistery">Mistery</option>
