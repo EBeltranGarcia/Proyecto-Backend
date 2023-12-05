@@ -5,7 +5,7 @@ import { useState } from "react";
 //components
 import MovieInfo from "../../../Components/movieInfo";
 
-function MovieFolders() {
+function MovieFolders({movies}) {
 
     const [show, setShow]= useState(false);
 
@@ -18,10 +18,10 @@ function MovieFolders() {
         <div className={show === true? "folder-container2":"folder-container"}>
             <div>
                 <img className={show === true? "folder-image2": "folder-image"} src="./assets/imagen-prueba-2.jpg" alt= "Imagen a prueba"/>
-                <h4 className={show === true? "movie-tittle2": "movie-tittle"}>spiderman lorem into the spiderverse</h4>
+                <h4 className={show === true? "movie-tittle2": "movie-tittle"}>{movies.name}</h4>
                 <button className={show === true? "folder-button2":"folder-button"} onClick={showFolder}>See More</button>
             </div>
-            {show === true? <MovieInfo setShow={setShow}/>: ""}
+            {show === true?  <MovieInfo genre={movies.genre} duration={movies.duration} rating={movies.rating} setShow={setShow}/>: ""}
         </div>
     )
 }

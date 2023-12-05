@@ -4,7 +4,7 @@ import "./movieInfo.css";
 
 //components
 
-function MovieInfo({setShow}) {
+function MovieInfo({genre,duration,rating,setShow}) {
 
     
     return (
@@ -12,15 +12,15 @@ function MovieInfo({setShow}) {
             <ul>
                 <li className="list-container">
                     <h4 className="info-tittle">Genre:</h4>
-                    <p>andsispan</p>
+                    <p>{genre}</p>
                 </li>
                 <li className="list-container">
                     <h4 className="info-tittle">Duration:</h4>
-                    <p>a lsadldsal</p>
+                    <p>{duration} min</p>
                 </li>
                 <li className="list-container"> 
                     <h4 className="info-tittle">Rating:</h4>
-                    <p>10/10</p>
+                    <p>{rating}/10</p>
                 </li>    
             </ul>
             <button className="close-button" onClick={()=> setShow(false)}>Close</button>

@@ -31,7 +31,7 @@
     margin-top: 20px;
     display: flex;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 5px;
 }
 .go-to-addMovie {
     position: absolute;

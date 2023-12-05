@@ -4,6 +4,7 @@
     height: auto;
     text-align: center;
     background-color: rgba(127, 193, 255, 0.932);
+    margin: 0px 10px 10px 0px;
 }
 .folder-container2 {
     border: solid 2px rgb(0, 47, 255);
