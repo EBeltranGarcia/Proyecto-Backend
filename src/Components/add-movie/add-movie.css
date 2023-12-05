@@ -1,0 +1,65 @@
+.video-background-form {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+}
+.addMovie-Container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.backgroundForm-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: rgba(133, 132, 132, 0.63);
+    padding: 80px 50px 80px 50px;
+}
+.text-input {
+    font-size: 23px;
+}
+.input-style {
+    border: none;
+    font-size: 18px;
+    border-radius: 2px;
+}
+#movieDuration {
+    width: 100px;
+}
+.addMovie-button {
+    border: none;
+    position: relative;
+    cursor: pointer;
+    top: 25px;
+    background-color: rgb(26, 26, 26);
+    color: white;
+    padding: 8px 15px 8px 15px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.addMovie-button:hover {
+    background-color: rgb(66, 66, 66);
+    color: white;
+}
+.goBack-button {
+    position: absolute;
+    left: 92%;
+    bottom: 90%;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    border: none;
+    background-color: rgb(26, 26, 26);
+    padding: 8px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+.goBack-button:hover {
+    background-color: rgb(68, 68, 68);
+}
