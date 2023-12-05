@@ -33,8 +33,7 @@ function UserHome({user, setUser}) {
                 <MovieFolders/>
             </main> 
             <section className="add-delete-container">
-                <button className="probando">Add Movie</button>
-                <Link className="probando" to="/addMovie">Hola</Link>
+                <Link className="go-to-addMovie " to="/addMovie">Add Movie</Link>
             </section>   
         </div>
     )

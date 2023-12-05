@@ -39,13 +39,17 @@
     flex-direction: column;
     gap: 10px;
 }
-.probando {
-    position: relative;
-    left: 500px;
-    bottom: 800px;
-    height: 50px;
-    width: 150px;
+.go-to-addMovie {
+    position: absolute;
+    left: 82%;
+    bottom: 50%;
     border: none;
-    background-color: rgb(185, 173, 173);
-    cursor: pointer;
+    text-decoration: none;
+    background-color: rgb(255, 96, 96);
+    color: black;
+    padding: 20px 40px 20px 40px;
+    border-radius: 2px;
+}
+.go-to-addMovie:hover {
+    background-color: rgb(255, 146, 146);
 }
