@@ -3,7 +3,7 @@ import "./log-in.css";
 //module packages
 import { useState } from "react";
 //components
-import FormLogIn from "../../Components/form-log-in";
+import FormLogIn from "../../Components/form-log/form-log-in";
 import UserHome from "./user-home/user-home";
 
 function LogIn() { 

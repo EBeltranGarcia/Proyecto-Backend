@@ -3,7 +3,7 @@ import "./movie-folders.css"
 //module packages
 import { useState } from "react";
 //components
-import MovieInfo from "../../../Components/movieInfo";
+import MovieInfo from "../movie-info/movieInfo";
 
 function MovieFolders({movies}) {
 

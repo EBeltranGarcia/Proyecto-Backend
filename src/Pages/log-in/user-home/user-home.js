@@ -4,7 +4,7 @@ import "./user-home.css";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 //components
-import MovieFolders from "../movie-folders/movie-folders";
+import MovieFolders from "../../../Components/movie-folders/movie-folders";
 
 
 function UserHome({user, setUser}) {
