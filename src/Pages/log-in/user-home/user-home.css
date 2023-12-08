@@ -39,11 +39,26 @@
     bottom: 50%;
     border: none;
     text-decoration: none;
-    background-color: rgb(255, 96, 96);
+    background-color: rgb(123, 154, 255);
     color: black;
     padding: 20px 40px 20px 40px;
     border-radius: 2px;
 }
 .go-to-addMovie:hover {
-    background-color: rgb(255, 146, 146);
+    background-color: rgb(150, 173, 248);
+}
+.button-deleteMovie {
+    font-size: 17px;
+    padding: 20px 30px 20px 30px;
+    position: absolute;
+    left: 82%;
+    bottom: 40%;
+    border: none;
+    text-decoration: none;
+    background-color: rgb(255, 96, 96);
+    border-radius: 2px;
+}
+.button-deleteMovie:hover {
+    background-color: rgb(252, 117, 117);
+    cursor: pointer;
 }

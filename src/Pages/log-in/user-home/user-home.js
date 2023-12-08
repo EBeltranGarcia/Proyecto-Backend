@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 //components
 import MovieFolders from "../../../Components/movie-folders/movie-folders";
+import DeleteMovie from "../../../Components/delete-movie/delete-movie";
 
 
 function UserHome({user, setUser}) {
@@ -25,6 +26,12 @@ function UserHome({user, setUser}) {
     useEffect(()=>{
         bringMovies()
     },[])
+
+    const [show, setShow]= useState(false);
+
+    const showFolder=() => {
+        setShow(true)
+    }
     
     return (
         <div className="homepage-container">
@@ -40,6 +47,8 @@ function UserHome({user, setUser}) {
             </main> 
             <section>
                 <Link className="go-to-addMovie " to="/addMovie">Add Movie</Link>
+                <button onClick={showFolder} className="button-deleteMovie" >Delete Movie</button>
+                {show === true? <DeleteMovie setShow={setShow} /> : ""}
             </section>   
         </div>
     )
