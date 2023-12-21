@@ -31,7 +31,7 @@ function UserHome() {
     
     return (
         <div className="homepage-container">
-            <nav className="titleAndLogOut-container">
+            <nav className="welcome-container">
                 <h2>Welcome back!</h2>
             </nav>
             <main className="folders-collage">
