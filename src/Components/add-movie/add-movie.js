@@ -10,7 +10,7 @@ function AddMovie() {
 
     const[messageOk,setMessageOk]= useState(false)
 
-    const loadUser = async (event) => {
+    const loadMovie = async (event) => {
 
         event.preventDefault();
 
@@ -34,7 +34,7 @@ function AddMovie() {
     return (
         <div>
             <video className='video-background-form' src="./assets/background-video-addMovie.mp4" autoPlay loop muted/>
-            <form className="addMovie-Container" onSubmit={(event)=>loadUser(event)}>
+            <form className="addMovie-Container" onSubmit={(event)=>loadMovie(event)}>
                 <div className="backgroundForm-container">
                     <div className="text-input">
                         <label htmlFor="movieName">Movie Name </label>
