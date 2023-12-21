@@ -73,7 +73,7 @@ function AddMovie() {
                     {messageOk === false? "" :<p className="confirmation-text">¡Movie Loaded!</p>}
                 </div>
             </form>
-            <Link to="/login" className='goBack-button'>Go back</Link>
+            <Link to="/home" className='goBack-button'>Go back</Link>
         </div>
     )
 }

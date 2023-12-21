@@ -4,15 +4,11 @@ import "./user-home.css";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 //components
-import MovieFolders from "../../../Components/movie-folders/movie-folders";
-import DeleteMovie from "../../../Components/delete-movie/delete-movie";
+import MovieFolders from "../Components/movie-folders/movie-folders";
+import DeleteMovie from "../Components/delete-movie/delete-movie";
 
 
-function UserHome({user, setUser}) {
-
-    const handleLogout = () => {
-        setUser([])
-    }
+function UserHome() {
 
     const [movies,setMovies] = useState([]);
 
@@ -36,11 +32,7 @@ function UserHome({user, setUser}) {
     return (
         <div className="homepage-container">
             <nav className="titleAndLogOut-container">
-                <div className="user-message-container">
-                    <h2>Welcome back!</h2>
-                    <h2 id="username">{user}</h2>
-                </div>    
-                <button onClick={handleLogout} className="logOut-button">Log Out</button>
+                <h2>Welcome back!</h2>
             </nav>
             <main className="folders-collage">
                 {movies.map((movies)=>{return <MovieFolders key={movies.id} movies={movies}/>})}

@@ -4,7 +4,7 @@
 import {BrowserRouter, Routes, Route } from "react-router-dom";
 //componentes
 import App from "../App";
-import LogIn from "../Pages/log-in/log-in";
+import UserHome from "../Pages/user-home"
 import AddMovie from "./add-movie/add-movie";
 
 function Router() {
@@ -12,7 +12,7 @@ function Router() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<App/>}/>
-                <Route path="/login" element={<LogIn/>}/>
+                <Route path="/home" element={<UserHome/>}/>
                 <Route path="/addMovie" element={<AddMovie/>}/>
             </Routes>
         </BrowserRouter>
