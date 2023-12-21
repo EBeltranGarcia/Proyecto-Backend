@@ -38,12 +38,12 @@ function AddMovie() {
                 <div className="backgroundForm-container">
                     <div className="text-input">
                         <label htmlFor="movieName">Movie Name </label>
-                        <input className="input-style" type="text" name="name" id="movieName"/>
+                        <input className="input-style" type="text" name="name" id="movieName" required/>
                     </div>
                     <div className="text-input">
                         <label htmlFor="movieGenre">Movie Genre </label>
-                        <select className="input-style" name="genre" id="movieGenre">
-                            <option value="Select">Select a Genre </option>
+                        <select className="input-style" name="genre" id="movieGenre" required>
+                            <option value="">Select a Genre </option>
                             <option value="Action">Action</option>
                             <option value="Comedy">Comedy</option>
                             <option value="Terror">Terror</option>
@@ -63,14 +63,14 @@ function AddMovie() {
                     </div>
                     <div className="text-input">
                         <label htmlFor="movieDuration">Movie Duration </label>
-                        <input className="input-style" type="number" name="duration" id="movieDuration" min="0" max="300" placeholder="In minutes"/>
+                        <input className="input-style" type="number" name="duration" id="movieDuration" min="0" max="300" placeholder="In minutes" required/>
                     </div>
                     <div className="text-input">
                         <label htmlFor="movieRating"> Movie Rating </label>
-                        <input className="input-style" type="number" name="rating" id="movieRating" min="0" max="10" placeholder="1-10"/>
+                        <input className="input-style" type="number" name="rating" id="movieRating" min="0" max="10" placeholder="1-10" required/>
                     </div>
                     <input className="addMovie-button" type="submit" value="Send"/>
-                    {messageOk === false? "" :<p className="confirmation-text">¡User Loaded!</p>}
+                    {messageOk === false? "" :<p className="confirmation-text">¡Movie Loaded!</p>}
                 </div>
             </form>
             <Link to="/login" className='goBack-button'>Go back</Link>
