@@ -3,7 +3,15 @@
     list-style: none;
     position: relative;
     left: 95px;
-    bottom: 305px;
+    bottom: 360px;
+}
+.infoId-container {
+    width: 40px;
+    list-style: none;
+    text-align: center;
+    position: relative;
+    bottom: 350px;
+    left: 225px;
 }
 .info-tittle {
     padding: 0%;
@@ -18,7 +26,7 @@
     cursor: pointer;
     margin: 5px 0px 10px 0px;
     position: relative;
-    bottom: 290px;
+    bottom: 340px;
     left: 320px;
 }
 .close-button:hover {

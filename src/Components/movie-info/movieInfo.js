@@ -4,11 +4,14 @@ import "./movieInfo.css";
 
 //components
 
-function MovieInfo({genre,duration,rating,setShow}) {
+function MovieInfo({genre,duration,rating,id,setShow}) {
 
     
     return (
         <div>
+            <section className="infoId-container">
+                <h5>Movie id: {id}</h5>
+            </section>
             <ul>
                 <li className="list-container">
                     <h4 className="info-tittle">Genre:</h4>
