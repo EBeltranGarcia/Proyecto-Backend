@@ -2,7 +2,6 @@
 import "./add-movie.css"
 //module packages
 import { Link } from 'react-router-dom';
-import axios from 'axios'
 import { useState } from "react";
 //components
 
@@ -14,15 +13,16 @@ function AddMovie() {
 
         event.preventDefault();
 
-        const formMovies={
-            "name":event.target[0].value,
-            "genre":event.target[1].value,
-            "duration":event.target[2].value,
-            "rating":event.target[3].value
-        }
+        const formInfo= new FormData(event.target)
 
-        await axios.post("http://localhost:3000/movies/insertMovie",formMovies)
-        .then((res)=>console.log(res))
+        formInfo.append("image",event.target[4].value)
+
+        await fetch("http://localhost:3000/movies/insertMovie",{
+            method: "post",
+            body: formInfo
+        })
+        .then((resp)=>{return resp.json})
+        //.then((res)=>console.log(res))
         .then(data=>event.target.reset())
         .then(()=> {
             setMessageOk(true);
@@ -68,6 +68,10 @@ function AddMovie() {
                     <div className="text-input">
                         <label htmlFor="movieRating"> Movie Rating </label>
                         <input className="input-style" type="number" name="rating" id="movieRating" min="0" max="10" placeholder="1-10" required/>
+                    </div>
+                    <div className="text-input">
+                        <label htmlFor="moviePoster"> Movie Poster </label>
+                        <input className="input-style" type="file" name="image" id="moviePoster" required/>
                     </div>
                     <input className="addMovie-button" type="submit" value="Send"/>
                     {messageOk === false? "" :<p className="confirmation-text">¡Movie Loaded!</p>}

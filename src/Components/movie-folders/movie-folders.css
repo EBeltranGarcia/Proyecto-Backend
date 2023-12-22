@@ -1,15 +1,17 @@
 .folder-container{
     border: solid 2px rgb(0, 47, 255);
     width: 230px;
-    height: auto;
+    height: fit-content;
     text-align: center;
     background-color: rgba(127, 193, 255, 0.932);
     margin: 0px 10px 10px 0px;
 }
 .folder-container2 {
+    display: flex;
+    gap: 20px;
     border: solid 2px rgb(0, 47, 255);
     width: 480px;
-    height: 355px;
+    height: 400px;
     background-color: rgba(127, 193, 255, 0.932);
 }
 .folder-image {
@@ -29,9 +31,12 @@
     word-wrap: break-word;
 }
 .movie-tittle2 {
+    width: 200px;
+    margin: 20px 0px 0px 15px;
+    text-align: center;
     font-size: 20px;
-    position: relative;
-    left: 30px;
+    display: flex;
+    justify-content: center;
 }
 .folder-button {
     border: none;

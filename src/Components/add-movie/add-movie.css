@@ -49,9 +49,13 @@
     color: white;
 }
 .confirmation-text {
+    height: 400px;
     color: white;
     position: absolute;
-    top: 72%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
 }
 .goBack-button {
     position: absolute;

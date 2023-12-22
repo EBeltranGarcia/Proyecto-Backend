@@ -1,17 +1,14 @@
+.movieInfo-container {
+    width: 200px;
+}
 .list-container {
     text-align: center;
     list-style: none;
-    position: relative;
-    left: 95px;
-    bottom: 360px;
 }
 .infoId-container {
-    width: 40px;
-    list-style: none;
-    text-align: center;
-    position: relative;
-    bottom: 350px;
-    left: 225px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
 }
 .info-tittle {
     padding: 0%;
@@ -26,8 +23,7 @@
     cursor: pointer;
     margin: 5px 0px 10px 0px;
     position: relative;
-    bottom: 340px;
-    left: 320px;
+    left: 85px;
 }
 .close-button:hover {
 background-color: rgb(172, 167, 167);

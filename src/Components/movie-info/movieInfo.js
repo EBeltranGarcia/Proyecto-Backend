@@ -8,7 +8,7 @@ function MovieInfo({genre,duration,rating,id,setShow}) {
 
     
     return (
-        <div>
+        <div className="movieInfo-container">
             <section className="infoId-container">
                 <h5>Movie id: {id}</h5>
             </section>
