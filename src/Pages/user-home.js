@@ -39,14 +39,9 @@ function UserHome() {
                 <h2>Welcome to your Gallery!</h2>
             </nav>
             <main className="folders-collage">
-                {movies.map((movies)=>{
-                    if (movies.length === 0) {
-                        return <p>No hay peliculas</p>
-                    } else {
-                        return <MovieFolders key={movies.id} movies={movies}/>
-                    }
-                    
-                    })}
+                {movies.length === 0 ? <p className="noMovies-container">There are no movies! Go to <b>"Add Movie"</b> to start using your gallery!</p>: 
+                movies.map((movies)=> {return <MovieFolders key={movies.id} movies={movies}/>
+            })}
             </main> 
             <section>
                 <Link className="go-to-addMovie " to="/addMovie">Add Movie</Link>
