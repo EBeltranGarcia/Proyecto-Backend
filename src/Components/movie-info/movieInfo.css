@@ -14,6 +14,10 @@
     padding: 0%;
     margin: 0%;
 }
+.bottom-line {
+    border-bottom: solid 1px black;
+    
+}
 .close-button {
     border: none;
     height: 30px;

@@ -15,15 +15,15 @@ function MovieInfo({genre,duration,rating,id,setShow}) {
             <ul>
                 <li className="list-container">
                     <h4 className="info-tittle">Genre:</h4>
-                    <p>{genre}</p>
+                    <p className="bottom-line" >{genre}</p>
                 </li>
                 <li className="list-container">
                     <h4 className="info-tittle">Duration:</h4>
-                    <p>{duration} min</p>
+                    <p className="bottom-line" >{duration} min</p>
                 </li>
                 <li className="list-container"> 
                     <h4 className="info-tittle">Rating:</h4>
-                    <p>{rating}/10</p>
+                    <p className="bottom-line" >{rating}/10</p>
                 </li>    
             </ul>
             <button className="close-button" onClick={()=> setShow(false)}>Close</button>
