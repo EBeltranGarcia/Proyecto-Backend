@@ -5,9 +5,10 @@ import { useState } from "react";
 //components
 
 
-function DeleteMovie({setShow}) {
+function DeleteMovie({setShow, setResetMovies, resetMovies}) {
 
     const[messageOk,setMessageOk]= useState(false)
+    
 
     const deleteMovie = async (event) => {
 
@@ -28,7 +29,9 @@ function DeleteMovie({setShow}) {
         .then(data=>event.target.reset())
         .then(()=> {
             setMessageOk(true);
-            setTimeout(()=>setMessageOk(false),2000)
+            setTimeout(()=>{setMessageOk(false);
+                setResetMovies(!resetMovies)},2000
+                )
         })
         .catch((error)=>console.log(error))
     }

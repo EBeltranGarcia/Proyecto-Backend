@@ -11,6 +11,8 @@ import DeleteMovie from "../Components/delete-movie/delete-movie";
 function UserHome() {
 
     const [movies,setMovies] = useState([]);
+    const [show, setShow]= useState(false);
+    const [resetMovies, setResetMovies] = useState(false)
 
     const bringMovies = async() => {
         await fetch("http://localhost:3000/movies")
@@ -18,12 +20,14 @@ function UserHome() {
         .then((data)=>setMovies(data))
         .catch((error)=>{console.log(error)})
     }
-
+    
     useEffect(()=>{
         bringMovies()
     },[])
 
-    const [show, setShow]= useState(false);
+    useEffect (()=>{
+        bringMovies()
+    },[resetMovies])
 
     const showFolder=() => {
         setShow(true)
@@ -32,15 +36,22 @@ function UserHome() {
     return (
         <div className="homepage-container">
             <nav className="welcome-container">
-                <h2>Welcome back!</h2>
+                <h2>Welcome to your Gallery!</h2>
             </nav>
             <main className="folders-collage">
-                {movies.map((movies)=>{return <MovieFolders key={movies.id} movies={movies}/>})}
+                {movies.map((movies)=>{
+                    if (movies.length === 0) {
+                        return <p>No hay peliculas</p>
+                    } else {
+                        return <MovieFolders key={movies.id} movies={movies}/>
+                    }
+                    
+                    })}
             </main> 
             <section>
                 <Link className="go-to-addMovie " to="/addMovie">Add Movie</Link>
                 <button onClick={showFolder} className="button-deleteMovie" >Delete Movie</button>
-                {show === true? <DeleteMovie setShow={setShow} /> : ""}
+                {show ? <DeleteMovie setShow={setShow} setResetMovies={setResetMovies} resetMovies={resetMovies} /> : ""}
             </section>   
         </div>
     )
