@@ -15,7 +15,7 @@ function DeleteMovie({setShow, setResetMovies, resetMovies}) {
         event.preventDefault();
 
         const formId={
-            "movieId":event.target[0].value
+            "movieId":event.target[0].value 
         }
 
         await fetch("http://localhost:3000/movies/deleteMovie",{

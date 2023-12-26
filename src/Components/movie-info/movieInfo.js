@@ -1,16 +1,25 @@
 //stylesheet
 import "./movieInfo.css";
 //module packages
-
+import { useState } from "react";
 //components
+import UpdateMovie from "../update-movie/updateMovie";
 
 function MovieInfo({genre,duration,rating,id,setShow}) {
+
+    const [showUpdate, setShowUpdate]= useState(false);
+
+    const showUpdateFolder=() => {
+        setShowUpdate(true)
+    }
 
     
     return (
         <div className="movieInfo-container">
             <section className="infoId-container">
                 <h5>Movie id: {id}</h5>
+                <button className={showUpdate === true? "editMovie-button2": "editMovie-button"} onClick={showUpdateFolder}>Edit Movie</button>
+                {showUpdate === true ? <UpdateMovie setShowUpdate={setShowUpdate}/>: "" }
             </section>
             <ul>
                 <li className="list-container">
