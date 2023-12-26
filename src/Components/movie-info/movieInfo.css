@@ -16,7 +16,7 @@
 }
 .bottom-line {
     border-bottom: solid 1px black;
-    
+    margin-top: 10px;
 }
 .close-button {
     border: none;
@@ -25,7 +25,7 @@
     background-color: rgb(197, 191, 191);
     border-radius: 2px;
     cursor: pointer;
-    margin: 5px 0px 10px 0px;
+    margin: 30px 0px 10px 0px;
     position: relative;
     left: 85px;
 }
