@@ -5,9 +5,41 @@ import { useState } from "react";
 //components
 
 
-function UpdateMovie({setShowUpdate}) {
+function UpdateMovie({id,setShowUpdate}) {
 
     //const[updateOk,setupdateOk]= useState(false)
+
+    const[type,setType]=useState("text");
+    const[generoOff,setGeneroOff]=useState(true)
+    const[dbName,setdbName]= useState("")
+
+    const definirCampo=(event)=>{
+
+        let campo=event.target.value
+
+        if(campo === "name") {
+            setType("text")
+            setGeneroOff(true)
+            setdbName("name")
+        }
+        if(campo === "genre"){
+            setGeneroOff(false)
+        }
+        if(campo === "duration"){
+            setType("number")
+            setGeneroOff(true)
+            setdbName("duration")
+        }
+        if(campo === "rating"){
+            setType("number")
+            setGeneroOff(true)
+            setdbName("rating")
+        }
+        if(campo === ""){
+            setType("text")
+            setdbName("")
+        }
+    }
 
     const updateMovieFunction = async (event) => {
 
@@ -35,7 +67,7 @@ function UpdateMovie({setShowUpdate}) {
             <form className="formUpdate-container" onSubmit={(event)=>updateMovieFunction(event)}>
                 <div>
                     <label htmlFor="opcion-a-editar">What are you going to edit?</label>
-                    <select className="inputUpdate-style" id="opcion-a-editar">
+                    <select className="inputUpdate-style" id="opcion-a-editar" onChange={(event)=>definirCampo(event)} >
                         <option value="">Select an Option </option>
                         <option value="name">Name</option>
                         <option value="genre">Genre</option>
@@ -45,7 +77,26 @@ function UpdateMovie({setShowUpdate}) {
                 </div>
                 <div>
                     <label htmlFor="Dato-a-cambiar">Info to edit</label>
-                    <input className="inputUpdate-style" type="text" id="Dato-a-cambiar"></input>
+                    {generoOff ? <input className="inputUpdate-style" type={type} id="Dato-a-cambiar" name={dbName} /> : 
+                    <select name="genre" id="Dato-a-cambiar">
+                        <option value="">Select a Genre </option>
+                        <option value="Action">Action</option>
+                        <option value="Comedy">Comedy</option>
+                        <option value="Terror">Terror</option>
+                        <option value="Science fiction">Science fiction</option>
+                        <option value="Suspense">Suspense</option>
+                        <option value="Superheros">Superheros</option>
+                        <option value="Romance">Romance</option>
+                        <option value="Adventure">Adventure</option>
+                        <option value="Documentary">Documentary</option>
+                        <option value="Fantasy">Fantasy</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Musical">Musical</option>
+                        <option value="Animation">Animation</option>
+                        <option value="Mistery">Mistery</option>
+                        <option value="Horror">Horror</option>
+                </select>
+                    }
                 </div>
                 <input className="sendUpdate" type="submit" value="Update"/>
             </form>
@@ -55,3 +106,6 @@ function UpdateMovie({setShowUpdate}) {
 }
 
 export default UpdateMovie;
+
+
+
