@@ -12,15 +12,20 @@ function UpdateMovie({id,setShowUpdate}) {
     const[type,setType]=useState("text");
     const[generoOff,setGeneroOff]=useState(true)
     const[dbName,setdbName]= useState("")
-
+    const[numberMin,setNumberMin]= useState()    
+    const[numberMax,setNumberMax]= useState()
+    const[placeholderDepends,setPlaceholderDepends]= useState()
+    
     const definirCampo=(event)=>{
 
         let campo=event.target.value
 
+        //Debe de haber una manera mucho mas eficiente que usar un millón de estados, pero se me ocurrió de esta manera
         if(campo === "name") {
             setType("text")
             setGeneroOff(true)
             setdbName("name")
+            setPlaceholderDepends()
         }
         if(campo === "genre"){
             setGeneroOff(false)
@@ -29,15 +34,22 @@ function UpdateMovie({id,setShowUpdate}) {
             setType("number")
             setGeneroOff(true)
             setdbName("duration")
+            setNumberMin(1)
+            setNumberMax(300)
+            setPlaceholderDepends()
         }
         if(campo === "rating"){
             setType("number")
             setGeneroOff(true)
             setdbName("rating")
+            setNumberMin(1)
+            setNumberMax(10)
+            setPlaceholderDepends("1-10")
         }
         if(campo === ""){
             setType("text")
-            setdbName("")
+            setdbName()
+            setPlaceholderDepends()
         }
     }
 
@@ -72,13 +84,13 @@ function UpdateMovie({id,setShowUpdate}) {
                         <option value="name">Name</option>
                         <option value="genre">Genre</option>
                         <option value="duration">Duration</option>
-                        <option value="rating">Rating</option>
+                        <option value="rating">Rating</option> 
                     </select>
                 </div>
                 <div>
-                    <label htmlFor="Dato-a-cambiar">Info to edit</label>
-                    {generoOff ? <input className="inputUpdate-style" type={type} id="Dato-a-cambiar" name={dbName} /> : 
-                    <select name="genre" id="Dato-a-cambiar">
+                    <label htmlFor="Dato-a-cambiar">Info to edit </label>
+                    {generoOff ? <input className="inputUpdate-style" type={type} id="Dato-a-cambiar" name={dbName} min={numberMin} max={numberMax} placeholder={placeholderDepends} /> : 
+                    <select className="inputUpdate-style" name="genre" id="Dato-a-cambiar">
                         <option value="">Select a Genre </option>
                         <option value="Action">Action</option>
                         <option value="Comedy">Comedy</option>
