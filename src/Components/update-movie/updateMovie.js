@@ -7,7 +7,7 @@ import { useState } from "react";
 
 function UpdateMovie({id,setShowUpdate}) {
 
-    //const[updateOk,setupdateOk]= useState(false)
+    const[updateOk,setupdateOk]= useState(false)
 
     const[type,setType]=useState("text");
     const[generoOff,setGeneroOff]=useState(true)
@@ -56,10 +56,16 @@ function UpdateMovie({id,setShowUpdate}) {
     const updateMovieFunction = async (event) => {
 
         event.preventDefault();
-/*
+        
+        const formInfo={
+            "fieldToEdit": event.target[0].value,
+            "infoToEdit":event.target[1].value,
+            "id":id
+        }
+        
         await fetch ("http://localhost:3000/movies/updateMovie",{
-            method:"update",
-            body:JSON.stringify(),
+            method:"put",
+            body:JSON.stringify(formInfo),
             headers:{
                 "content-type":"application/json"
             }
@@ -70,7 +76,8 @@ function UpdateMovie({id,setShowUpdate}) {
             setupdateOk(true);
             setTimeout(()=>setupdateOk(false),2000)
         })
-        .catch((error)=>console.log(error))*/
+        .then(()=>window.location.reload())
+        .catch((error)=>console.log(error))
     }
 
     return (
@@ -112,7 +119,7 @@ function UpdateMovie({id,setShowUpdate}) {
                 </div>
                 <input className="sendUpdate" type="submit" value="Update"/>
             </form>
-            {/*updateOk === false? "" :*/<p className="update-confirmation-text">¡Movie Updated!</p>}
+            {updateOk === false? "" :<p className="update-confirmation-text">¡Movie Updated!</p>}
         </div>
     )
 }
