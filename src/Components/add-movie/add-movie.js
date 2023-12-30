@@ -17,7 +17,7 @@ function AddMovie() {
 
         formInfo.append("image",event.target[4].value)
 
-        await fetch("http://movie-app-37pf.onrender.com/movies/insertMovie",{
+        await fetch("https://movie-app-37pf.onrender.com/movies/insertMovie",{
             method: "post",
             body: formInfo
         })

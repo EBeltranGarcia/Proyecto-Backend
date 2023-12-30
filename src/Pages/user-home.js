@@ -15,7 +15,7 @@ function UserHome() {
     const [resetMovies, setResetMovies] = useState(false)
 
     const bringMovies = async() => {
-        await fetch("http://movie-app-37pf.onrender.com/movies")
+        await fetch("https://movie-app-37pf.onrender.com/movies")
         .then((res)=>{return res.json()})
         .then((data)=>setMovies(data))
         .catch((error)=>{console.log(error)})
