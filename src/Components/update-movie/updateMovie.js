@@ -63,7 +63,7 @@ function UpdateMovie({id,setShowUpdate}) {
             "id":id
         }
         
-        await fetch ("http://localhost:3000/movies/updateMovie",{
+        await fetch ("https://movie-app-37pf.onrender.com/movies/updateMovie",{
             method:"put",
             body:JSON.stringify(formInfo),
             headers:{

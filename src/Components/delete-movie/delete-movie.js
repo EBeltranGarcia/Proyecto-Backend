@@ -17,7 +17,7 @@ function DeleteMovie({setShow, setResetMovies, resetMovies}) {
             "movieId":event.target[0].value 
         }
 
-        await fetch("http://localhost:3000/movies/deleteMovie",{
+        await fetch("https://movie-app-37pf.onrender.com/movies/deleteMovie",{
             method:"delete",
             body:JSON.stringify(formId),
             headers:{
