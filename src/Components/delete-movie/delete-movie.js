@@ -9,7 +9,6 @@ function DeleteMovie({setShow, setResetMovies, resetMovies}) {
 
     const[messageOk,setMessageOk]= useState(false)
     
-
     const deleteMovie = async (event) => {
 
         event.preventDefault();
@@ -25,7 +24,7 @@ function DeleteMovie({setShow, setResetMovies, resetMovies}) {
                 "content-type":"application/json"
             }
         })
-        .then((res)=>console.log(res))
+        //.then((res)=>console.log(res))
         .then(data=>event.target.reset())
         .then(()=> {
             setMessageOk(true);

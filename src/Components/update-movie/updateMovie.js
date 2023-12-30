@@ -70,7 +70,7 @@ function UpdateMovie({id,setShowUpdate}) {
                 "content-type":"application/json"
             }
         })
-        .then((res)=>console.log(res))
+        //.then((res)=>console.log(res))
         .then(data=>event.target.reset())
         .then(()=> {
             setupdateOk(true);

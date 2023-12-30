@@ -13,7 +13,6 @@ function MovieInfo({genre,duration,rating,id,setShow}) {
         setShowUpdate(true)
     }
 
-    
     return (
         <div className="movieInfo-container">
             <section className="infoId-container">
