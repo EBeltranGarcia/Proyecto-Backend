@@ -5,7 +5,7 @@ import { useState } from "react";
 //components
 import UpdateMovie from "../update-movie/updateMovie";
 
-function MovieInfo({genre,duration,rating,id,setShow}) {
+function MovieInfo({genre,duration,rating,id,setShow,setResetMoviesEdit,resetMoviesEdit}) {
 
     const [showUpdate, setShowUpdate]= useState(false);
 
@@ -18,7 +18,7 @@ function MovieInfo({genre,duration,rating,id,setShow}) {
             <section className="infoId-container">
                 <h5>Movie id: {id}</h5>
                 <button className={showUpdate === true? "editMovie-button2": "editMovie-button"} onClick={showUpdateFolder}>Edit Movie</button>
-                {showUpdate === true ? <UpdateMovie id={id} setShowUpdate={setShowUpdate}/>: "" }
+                {showUpdate === true ? <UpdateMovie id={id} setShowUpdate={setShowUpdate} setResetMoviesEdit={setResetMoviesEdit} resetMoviesEdit={resetMoviesEdit}/>: "" }
             </section>
             <ul>
                 <li className="list-container">
