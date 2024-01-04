@@ -5,7 +5,7 @@ import { useState } from "react";
 //components
 import MovieInfo from "../movie-info/movieInfo";
 
-function MovieFolders({movies,setResetMoviesEdit,resetMoviesEdit}) {
+function MovieFolders({movies}) {
 
     const [show, setShow]= useState(false);
 
@@ -21,7 +21,7 @@ function MovieFolders({movies,setResetMoviesEdit,resetMoviesEdit}) {
                 <h4 className={show === true? "movie-tittle2": "movie-tittle"}>{movies.name}</h4>
                 <button className={show === true? "folder-button2":"folder-button"} onClick={showFolder}>See More</button>
             </div>
-            {show === true?  <MovieInfo genre={movies.genre} duration={movies.duration} rating={movies.rating} id={movies.id} setShow={setShow} setResetMoviesEdit={setResetMoviesEdit} resetMoviesEdit={resetMoviesEdit} />: ""}
+            {show === true?  <MovieInfo genre={movies.genre} duration={movies.duration} rating={movies.rating} id={movies.id} setShow={setShow}/>: ""}
         </div>
     )
 }

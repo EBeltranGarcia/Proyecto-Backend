@@ -13,7 +13,6 @@ function UserHome() {
     const [movies,setMovies] = useState([]);
     const [show, setShow]= useState(false);
     const [resetMovies, setResetMovies] = useState(false)
-    const [resetMoviesEdit, setResetMoviesEdit] = useState(false)
 
     const bringMovies = async() => {
         await fetch("https://movie-app-37pf.onrender.com/movies")
@@ -30,10 +29,6 @@ function UserHome() {
         bringMovies()
     },[resetMovies])
 
-    useEffect (()=>{
-        bringMovies()
-    },[resetMoviesEdit])
-
     const showFolder=() => {
         setShow(true)
     }
@@ -45,7 +40,7 @@ function UserHome() {
             </nav>
             <main className="folders-collage">
                 {movies.length === 0 ? <p className="noMovies-container">There are no movies! Go to <b>"Add Movie"</b> to start using your gallery!</p>: 
-                movies.map((movies)=> {return <MovieFolders key={movies.id} movies={movies} setResetMoviesEdit={setResetMoviesEdit} resetMoviesEdit={resetMoviesEdit}/>
+                movies.map((movies)=> {return <MovieFolders key={movies.id} movies={movies}/>
             })}
             </main> 
             <section>

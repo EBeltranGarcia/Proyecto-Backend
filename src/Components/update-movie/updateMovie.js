@@ -5,7 +5,7 @@ import { useState } from "react";
 //components
 
 
-function UpdateMovie({id,setShowUpdate,setResetMoviesEdit,resetMoviesEdit}) {
+function UpdateMovie({id,setShowUpdate}) {
 
     const[updateOk,setupdateOk]= useState(false)
 
@@ -74,9 +74,9 @@ function UpdateMovie({id,setShowUpdate,setResetMoviesEdit,resetMoviesEdit}) {
         .then(data=>event.target.reset())
         .then(()=> {
             setupdateOk(true);
-            setTimeout(()=>{setupdateOk(false);
-            setResetMoviesEdit(!resetMoviesEdit)},2000)
+            setTimeout(()=>setupdateOk(false),2000)
         })
+        .then(()=>window.location.reload())//sdaadsadsdsaasd
         .catch((error)=>console.log(error))
     }
 
